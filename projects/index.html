@@ -3,17 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Projects | Jacey Chow</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
-<body>
-    <h1>Projects</h1>
 
-    <nav>
-        <a href="../">Home</a>
-        <a href="../projects/">Projects</a>
-        <a href="../contact/">Contact</a>
-        <a href="..resume/">Resume</a>
-        <a href="https://github.com/jaceyccy" target="_blank">GitHub</a>
-    </nav>
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <a class="brand" href="../">
+            Jacey Chow
+            <span>Data Science · UC San Diego</span>
+        </a>
+
+        <nav aria-label="Main navigation">
+            <a href="../">Home</a>
+            <a href="../projects/" aria-current="page">Projects</a>
+            <a href="../resume/">Resume</a>
+            <a href="../contact/">Contact</a>
+            <a href="https://github.com/jaceyccy"
+               target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </nav>
+    </header>
+
+    <main id="main">
+        <header class="page-heading">
+            <p class="eyebrow">Build. Test. Learn.</p>
+            <h1>Projects</h1>
+            <p class="lead">
+                A closer look at how I use data and machine learning
+                to explore real-world questions.
+            </p>
+        </header>
+
+        <section class="grid" aria-label="Project collection">
+            <article class="card">
+                <p class="eyebrow">Machine Learning / Robotics</p>
+                <h2>Autonomous Lane-Following Robot</h2>
+
+                <p>
+                    Developed an image-based driving model to guide
+                    a robot through autonomous lane following.
+                </p>
+
+                <ul>
+                    <li>
+                        Trained deep-learning models using TensorFlow
+                        and recorded driving images.
+                    </li>
+                    <li>
+                        Deployed trained models to Raspberry Pi hardware
+                        and evaluated driving behavior.
+                    </li>
+                    <li>
+                        Explored image augmentation to address changes
+                        in lighting conditions.
+                    </li>
+                </ul>
+
+                <ul class="tags">
+                    <li>Python</li>
+                    <li>TensorFlow</li>
+                    <li>Raspberry Pi</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <p class="eyebrow">Data Analysis / Predictive Modeling</p>
+                <h2>Recipe Analysis &amp; Predictive Modeling</h2>
+
+                <p>
+                    Investigated recipe characteristics through data
+                    cleaning, statistical analysis, and predictive modeling.
+                </p>
+
+                <ul>
+                    <li>
+                        Cleaned recipe data and analyzed missingness
+                        to assess data quality.
+                    </li>
+                    <li>
+                        Applied permutation tests and hypothesis testing
+                        to investigate patterns.
+                    </li>
+                    <li>
+                        Built a predictive model and published findings
+                        in a project website.
+                    </li>
+                </ul>
+
+                <ul class="tags">
+                    <li>pandas</li>
+                    <li>Statistical Testing</li>
+                    <li>Machine Learning</li>
+                </ul>
+
+                <a
+                    class="text-link"
+                    href="https://maggieshao596.github.io/The_Calorie_Step_Connection/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Explore the analysis ↗
+                </a>
+            </article>
+        </section>
+
+        <section class="callout">
+            <h2>This portfolio is a project, too.</h2>
+            <p>
+                Built with semantic HTML and responsive CSS for DSC 106.
+                Each page shares consistent navigation and adapts
+                to smaller screens.
+            </p>
+            <a
+                class="text-link"
+                href="https://github.com/jaceyccy/Porfolio"
+                target="_blank"
+                rel="noopener noreferrer">
+                View the portfolio source ↗
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Jacey Chow · Learning through building.</p>
+        <a href="mailto:j6chow@ucsd.edu">j6chow@ucsd.edu</a>
+    </footer>
 </body>
 </html>

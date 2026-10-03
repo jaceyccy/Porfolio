@@ -3,23 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jacey Chow</title>
+    <title>Jacey Chow: Personal site and portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1> Jacey Chow</h1>
-    <p> I am a Data Science student at UC San Diego with interests in machine 
-        learning, data analysis, and building practical technology projects. 
-        I enjoy turning data into meaningful insights and applying technical 
-        skills to real-world problems.</p>
-    <img src="images/puppy.jpeg" 
-    alt="My dream is to have 2 golden retrievers that are forever healthy and young">
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="projects/">Projects</a>
-        <a href="contact/">Contact</a>
-        <a href="resume/">Resume</a>
-        <a href="https://github.com/jaceyccy" target="_blank">GitHub</a>
-    </nav>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <a class="brand" href="./">
+            Jacey Chow
+            <span>Data Science · UC San Diego</span>
+        </a>
+
+        <nav aria-label="Main navigation">
+            <a href="./" aria-current="page">Home</a>
+            <a href="projects/">Projects</a>
+            <a href="resume/">Resume</a>
+            <a href="contact/">Contact</a>
+            <a href="https://github.com/jaceyccy"
+               target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="hero">
+            <div>
+                <p class="eyebrow">Curiosity → Analysis → Impact</p>
+
+                <h1>
+                    Hi, I'm Jacey.<br>
+                    <span>I turn curiosity into projects.</span>
+                </h1>
+
+                <p class="lead">
+                    I'm a Data Science student at UC San Diego,
+                    interested in machine learning, thoughtful analysis,
+                    and technology that solves practical problems.
+                </p>
+
+                <div class="actions">
+                    <a class="button" href="projects/">
+                        Explore my projects ↗
+                    </a>
+                    <a class="button secondary" href="resume/">
+                        View my resume
+                    </a>
+                </div>
+
+                <p class="small">
+                    Python · Data Analysis · Machine Learning
+                </p>
+            </div>
+
+            <figure>
+                <img
+                    src="images/puppy.jpeg"
+                    alt="Two golden retriever puppies sitting together
+                         in a grassy field with orange flowers">
+
+                <figcaption>
+                    A little personality beyond the code: I dream of
+                    having two healthy, happy golden retrievers.
+                </figcaption>
+            </figure>
+        </section>
+
+        <section class="section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">From ideas to experiments</p>
+                    <h2>Selected projects</h2>
+                </div>
+
+                <a class="text-link" href="projects/">
+                    See projects ↗
+                </a>
+            </div>
+
+            <div class="grid">
+                <article class="card">
+                    <p class="eyebrow">Machine Learning / Robotics</p>
+                    <h3>Learning to drive, one frame at a time.</h3>
+
+                    <p>
+                        Trained TensorFlow models on image-based driving
+                        data and deployed them to a Raspberry Pi for
+                        autonomous lane following. Explored image
+                        augmentation to help models handle changes
+                        in lighting.
+                    </p>
+
+                    <ul class="tags">
+                        <li>Python</li>
+                        <li>TensorFlow</li>
+                        <li>Raspberry Pi</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <p class="eyebrow">Data Analysis / Predictive Modeling</p>
+                    <h3>Finding patterns in recipe data.</h3>
+
+                    <p>
+                        Cleaned recipe data, investigated missingness,
+                        and used permutation tests to examine recipe
+                        characteristics. Built a predictive model and
+                        published the analysis as a project website.
+                    </p>
+
+                    <ul class="tags">
+                        <li>pandas</li>
+                        <li>Statistical Testing</li>
+                        <li>Machine Learning</li>
+                    </ul>
+
+                    <a
+                        class="text-link"
+                        href="https://maggieshao596.github.io/The_Calorie_Step_Connection/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Explore the analysis ↗
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section class="callout">
+            <h2>Let's connect.</h2>
+            <p>
+                Have a project idea, a question, or an opportunity to
+                collaborate? I'd love to hear from you.
+            </p>
+            <a class="text-link" href="contact/">Get in touch ↗</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Jacey Chow · Learning through building.</p>
+        <a href="mailto:j6chow@ucsd.edu">j6chow@ucsd.edu</a>
+    </footer>
 </body>
 </html>

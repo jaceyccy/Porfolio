@@ -3,62 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+    <title>Resume | Jacey Chow</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
+    <a class="skip" href="#main">Skip to content</a>
 
-    <nav>
-        <a href="../">Home</a>
-        <a href="../projects/">Projects</a>
-        <a href="../contact/">Contact</a>
-        <a href="../resume/">Resume</a>
-        <a href="https://github.com/jaceyccy" target="_blank">GitHub</a>
-    </nav>
+    <header class="site-header">
+        <a class="brand" href="../">
+            Jacey Chow
+            <span>Data Science · UC San Diego</span>
+        </a>
 
-    <h1>Resume</h1>
+        <nav aria-label="Main navigation">
+            <a href="../">Home</a>
+            <a href="../projects/">Projects</a>
+            <a href="../resume/" aria-current="page">Resume</a>
+            <a href="../contact/">Contact</a>
+            <a href="https://github.com/jaceyccy"
+               target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </nav>
+    </header>
 
-    <section>
-        <h2>Education</h2>
+    <main id="main">
+        <header class="page-heading">
+            <p class="eyebrow">Background &amp; experience</p>
+            <h1>Resume</h1>
 
-        <article>
-            <h3>University of California, San Diego</h3>
-            <p>B.S. Data Science</p>
-            <p>Minor in Business Analytics</p>
-        </article>
+            <p class="lead">
+                Jacey Chow · Data Science student at UC San Diego
+            </p>
 
-    </section>
+            <p>
+                <a href="mailto:j6chow@ucsd.edu">j6chow@ucsd.edu</a>
+                ·
+                <a href="https://github.com/jaceyccy">GitHub</a>
+            </p>
+        </header>
 
-    <section>
-        <h2>Projects</h2>
+        <section class="resume-section">
+            <h2>Education</h2>
 
-        <article>
-            <h3>Autonomous Land-Following Robotn   </h3>
-            <p>Developed and trained TensorFlow deep-learning models on 
-                image-based driving data; deployed trained models to 
-                Respberry Pi hardware for autonomous land following in 5 weeks</p>
-        </article>
+            <article>
+                <h3>University of California, San Diego</h3>
+                <p>B.S. in Data Science</p>
+                <p>Minor in Business Analytics</p>
+                <p class="muted">Currently pursuing degree</p>
+            </article>
+        </section>
 
-        <article>
-            <h3>Recipe Analysis & Predictive Modeling</h3>
-            <p>Cleaned recipe data and analyzed missingness to assess data quality before statistical analysis and model
-                development. Applied permutation tests and hypothesis testing to investigate recipe characteristics; built a predictive
-                model and published findings in a project website.</p>
-                <a href="https://maggieshao596.github.io/The_Calorie_Step_Connection/">Click here</a>
-        </article>
-    </section>
+        <section class="resume-section">
+            <h2>Projects</h2>
 
-    <section>
-        <h2>Skills</h2>
+            <div>
+                <article>
+                    <h3>Autonomous Lane-Following Robot</h3>
 
-        <ul>
-            <li>Python</li>
-            <li>pandas</li>
-            <li>NumPy</li>
-            <li>scikit-learn</li>
-            <li>HTML/CSS</li>
-        </ul>
-    </section>
+                    <p class="muted">
+                        <time datetime="2026">2026</time>
+                        · Python, TensorFlow, Raspberry Pi
+                    </p>
 
+                    <ul>
+                        <li>
+                            Developed and trained deep-learning models
+                            using image-based driving data for
+                            autonomous lane following.
+                        </li>
+                        <li>
+                            Deployed trained models to Raspberry Pi
+                            hardware and evaluated driving behavior.
+                        </li>
+                        <li>
+                            Explored image augmentation to address
+                            variation in lighting conditions.
+                        </li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Recipe Analysis &amp; Predictive Modeling</h3>
+
+                    <ul>
+                        <li>
+                            Cleaned recipe data and analyzed missingness
+                            to assess data quality before modeling.
+                        </li>
+                        <li>
+                            Applied permutation tests and hypothesis
+                            testing to investigate recipe characteristics.
+                        </li>
+                        <li>
+                            Built a predictive model and published findings
+                            in an accessible project website.
+                        </li>
+                    </ul>
+
+                    <a
+                        class="text-link"
+                        href="https://maggieshao596.github.io/The_Calorie_Step_Connection/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Read the project analysis ↗
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2>Technical skills</h2>
+
+            <div>
+                <h3>Programming &amp; analysis</h3>
+                <p>Python, pandas, NumPy</p>
+
+                <h3>Machine learning</h3>
+                <p>TensorFlow, scikit-learn</p>
+
+                <h3>Web development</h3>
+                <p>HTML, CSS</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Jacey Chow · Learning through building.</p>
+        <a href="mailto:j6chow@ucsd.edu">j6chow@ucsd.edu</a>
+    </footer>
 </body>
 </html>
