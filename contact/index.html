@@ -1,40 +1,61 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contact | Jacey Chow</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <h1>Contact</h1>
+    <a class="skip" href="#main">Skip to content</a>
 
-    <form 
-        action="mailto:j6chow@ucsd.edu" 
-        method="POST"
-        enctype="text/plain"
-        >
-        <label>
-           Email: <input type="email" name="email">
-        </label>
+    <header class="site-header">
+        <a class="brand" href="../">
+            Jacey Chow
+            <span>Data Science · UC San Diego</span>
+        </a>
 
+        <nav aria-label="Main navigation">
+            <a href="../">Home</a>
+            <a href="../projects/">Projects</a>
+            <a href="../resume/">Resume</a>
+            <a href="../contact/" aria-current="page">Contact</a>
+            <a href="https://github.com/jaceyccy"
+               target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </nav>
+    </header>
 
-        <label>
-            Subject: <input name="subject">
-        </label>
+    <main id="main">
+        <header class="page-heading">
+            <h1>Contact</h1>
+            <p class="lead">
+                Have a question or want to collaborate?
+                Feel free to reach out!
+            </p>
+        </header>
 
-        <label>
-           Message: <textarea name="body"></textarea>
-        </label>
+        <form action="mailto:j6chow@ucsd.edu"
+              method="POST"
+              enctype="text/plain">
 
-        <button>Send</button>
-    </form>
+            <label>
+                Email:
+                <input type="email" name="email" required>
+            </label>
 
-    <nav>
-        <a href="../">Home</a>
-        <a href="../projects/">Projects</a>
-        <a href="../contact/">Contact</a>
-        <a href="../resume/">Resume</a>
-        <a href="https://github.com/jaceyccy" target="_blank">GitHub</a>
-    </nav>
+            <label>
+                Subject:
+                <input name="subject" required>
+            </label>
+
+            <label>
+                Message:
+                <textarea name="body" rows="6" required></textarea>
+            </label>
+
+            <button class="button" type="submit">Send</button>
+        </form>
+    </main>
 </body>
 </html>
