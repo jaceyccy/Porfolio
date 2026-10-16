@@ -1,11 +1,18 @@
 /* Colors shared across the website */
 :root {
-  --ink: #20372f;
-  --muted: #58675f;
-  --accent: #245c48;
-  --paper: #f8f7f2;
-  --line: #d9dfd7;
-  --white: #fffefa;
+  color-scheme: light dark;
+
+  --ink: light-dark(#20372f, #edf3ee);
+  --muted: light-dark(#58675f, #b8c7be);
+  --accent: light-dark(#245c48, #9bd5b5);
+  --paper: light-dark(#f8f7f2, #151c18);
+  --line: light-dark(#d9dfd7, #405147);
+  --white: light-dark(#fffefa, #202a24);
+
+  --soft: light-dark(#e8ece3, #29382e);
+  --hover: light-dark(#e6ece3, #34483c);
+  --button-text: light-dark(#ffffff, #15291d);
+  --button-hover: light-dark(#174634, #b7e7ca);
 
   accent-color: var(--accent);
 }
@@ -96,7 +103,7 @@ nav a:hover {
   background: #e6ece3;
 }
 
-nav a[aria-current='page']{
+nav a.current{
   border-bottom-color: var(--accent);
   background: #e6ece3;
   font-weight: 700;
@@ -352,7 +359,7 @@ form {
   gap:1em;
 }
 
-label {
+from label {
   display: grid;
   grid-template-columns: subgrid;
   grid-column: 1/-1;
@@ -518,3 +525,42 @@ footer p {
   width: 100%;
   height: auto;
 }
+
+.button.secondary:hover {
+  background: var(--hover);
+  color: var(--accent);
+}
+
+/* Reserve space above the header for the theme control. */
+body {
+  padding-top: 3.5rem;
+}
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-size: 80%;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.color-scheme select {
+  font: inherit;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--white);
+  color: var(--ink);
+}
+
+select:focus-visible {
+  outline: 3px solid #bf761d;
+  outline-offset: 4px;
+}
+
