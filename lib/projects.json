@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Autonomous Lane-Following Robot",
+        "year": 2025,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Built an image-based driving model for a robot, then explored image augmentation to improve its response to changing lighting."
+    },
+    {
+        "title": "Recipe Analysis and Predictive Modeling",
+        "year": 2025,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Cleaned recipe data, examined missing values, and used statistical tests and predictive modeling to explore recipe characteristics."
+    },
+    {
+        "title": "Comparing Ultra-Processed Food Across Stores",
+        "year": 2026,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Compared the share of ultra-processed products across Target, Walmart, and Whole Foods using product category data."
+    },
+    {
+        "title": "World Bank Development Indicators",
+        "year": 2026,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Explored relationships between country-level development indicators and created visualizations to communicate patterns in the data."
+    },
+    {
+        "title": "NourishNet Food Access Data",
+        "year": 2025,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Combined and standardized information from community sources to support a food-access platform."
+    },
+    {
+        "title": "Student Performance Prediction",
+        "year": 2024,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Prepared student data and explored supervised learning methods for predicting academic performance."
+    },
+    {
+        "title": "San Diego Housing Trends",
+        "year": 2026,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Analyze housing data to compare prices across neighborhoods and examine how costs change over time."
+    },
+    {
+        "title": "Campus Dining Price Explorer",
+        "year": 2025,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Organize dining price information into a searchable guide that helps students compare meal options."
+    },
+    {
+        "title": "Course Enrollment Patterns",
+        "year": 2024,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Visualize course enrollment data to explore how class sizes and student demand vary across subjects."
+    },
+    {
+        "title": "Pariatur reiciendis similique aperiam.",
+        "year": 2026,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Optio temporibus doloremque iusto cupiditate nobis magni explicabo alias ratione autem saepe, atque magnam officiis expedita? Praesentium ad omnis, iure nisi ut, libero pariatur quis error atque, quaerat sit mollitia!"
+    },
+    {
+        "title": "Public Transit Access Map",
+        "year": 2024,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Map transit stops and nearby destinations to explore how easily residents can reach essential services."
+    },
+    {
+        "title": "Movie Recommendation Prototype",
+        "year": 2025,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Create a small recommendation prototype that suggests movies based on a user's ratings and preferences."
+    }
+]

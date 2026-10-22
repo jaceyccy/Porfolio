@@ -87,3 +87,47 @@ select.addEventListener("input", (event) => {
   setColorScheme(colorScheme);
   localStorage.setItem("colorScheme", colorScheme);
 });
+
+export async function fetchJSON(url) {
+  try {
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(`Request failed: ${response.status}`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Error fetching or parsing JSON data:", error);
+    return null;
+  }
+}
+
+export function renderProjects(projects, container, headingLevel = "h2") {
+  if (!container || !Array.isArray(projects)) return;
+
+  container.innerHTML = "";
+
+  const validHeading = /^h[1-6]$/.test(headingLevel)
+    ? headingLevel
+    : "h2";
+
+  for (const project of projects) {
+    const article = document.createElement("article");
+    const title = project.title ?? "Untitled project";
+    const image = project.image ?? "";
+    const description = project.description ?? "";
+
+    article.innerHTML = `
+      <${validHeading}>${title}</${validHeading}>
+      <img src="${image}" alt="${title}">
+      <p>${description}</p>
+    `;
+
+    container.appendChild(article);
+  }
+}
+
+export async function fetchGitHubData(username) {
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}
