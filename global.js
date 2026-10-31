@@ -119,10 +119,13 @@ export function renderProjects(projects, container, headingLevel = "h2") {
     const description = project.description ?? "";
 
     article.innerHTML = `
-      <${validHeading}>${title}</${validHeading}>
-      <img src="${image}" alt="${title}">
+    <${validHeading}>${title}</${validHeading}>
+    <img src="${image}" alt="${title}">
+    <div class="project-details">
       <p>${description}</p>
-    `;
+      <p class="project-year">${project.year ?? "Year unavailable"}</p>
+    </div>
+  `;
 
     container.appendChild(article);
   }

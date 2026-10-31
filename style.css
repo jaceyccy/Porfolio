@@ -564,3 +564,108 @@ select:focus-visible {
   outline-offset: 4px;
 }
 
+/* Lab 5: project years */
+.project-year {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-family: Baskerville, Georgia, serif;
+  font-variant-numeric: oldstyle-nums;
+}
+
+/* Chart and legend layout */
+.chart-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  margin-block: 1.5rem;
+}
+
+#projects-pie-plot {
+  display: block;
+  width: min(100%, 20rem);
+  height: auto;
+  flex: 0 1 20rem;
+  overflow: visible;
+}
+
+.legend {
+  flex: 1 1 16rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  margin: 0;
+  list-style: none;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.legend-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.65rem;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.legend-button:hover {
+  background: var(--hover);
+}
+
+.swatch {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  border-radius: 3px;
+  background: var(--color);
+}
+
+/* Hover and selection */
+#projects-pie-plot path {
+  cursor: pointer;
+  transition: opacity 200ms, fill 200ms;
+}
+
+#projects-pie-plot:has(path:hover) path:not(:hover) {
+  opacity: 0.5;
+}
+
+#projects-pie-plot path.selected {
+  fill: #d72670;
+}
+
+.legend-item.selected {
+  --color: #d72670 !important;
+}
+
+.legend-item.selected .legend-button {
+  border-color: var(--accent);
+  background: var(--soft);
+  font-weight: 700;
+}
+
+#projects-pie-plot path:focus-visible {
+  outline: none;
+  stroke: var(--ink);
+  stroke-width: 2;
+}
+
+/* Search */
+.searchBar {
+  margin-block: 0.5rem 1rem;
+  background: var(--white);
+  color: var(--ink);
+}
+
+#filter-status {
+  margin-bottom: 1rem;
+}

@@ -100,12 +100,38 @@
             </article>
         </section>
 
-        <section aria-label="Project Gallery">
-            <h2>Project Gallery</h2>
-
-            <div class="projects">
+        <section aria-labelledby="gallery-heading">
+            <h2 id="gallery-heading">Project Gallery</h2>
+          
+            <p id="chart-help" class="muted">
+              Explore projects by year. Click a slice or a legend button
+              to filter; click it again to show all years.
+            </p>
+          
+            <div class="chart-container">
+              <svg
+                id="projects-pie-plot"
+                viewBox="-50 -50 100 100"
+                role="group"
+                aria-label="Filter projects by year"
+                aria-describedby="chart-help"
+              ></svg>
+          
+              <ul class="legend" aria-label="Project years"></ul>
             </div>
-        </section>
+          
+            <label for="project-search">Search projects</label>
+            <input
+              id="project-search"
+              class="searchBar"
+              type="search"
+              placeholder="Search titles, descriptions, or years…"
+            >
+          
+            <p id="filter-status" class="muted" aria-live="polite"></p>
+          
+            <div class="projects"></div>
+          </section>
 
 
 
