@@ -669,3 +669,189 @@ select:focus-visible {
 #filter-status {
   margin-bottom: 1rem;
 }
+
+/* Lab 6: Meta page */
+
+.meta-page main > section {
+  margin-block: 2.5rem;
+}
+
+.meta-page #meta-status {
+  padding: 1rem;
+  border: 1px solid currentColor;
+  border-radius: 0.5rem;
+}
+
+.meta-page #meta-status[hidden] {
+  display: none;
+}
+
+.meta-page .meta-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-block: 1.25rem;
+}
+
+.meta-page .meta-stats > div {
+  padding: 1rem;
+  border: 1px solid color-mix(in srgb, CanvasText 18%, transparent);
+  border-radius: 0.75rem;
+  background: color-mix(in srgb, CanvasText 3%, Canvas);
+}
+
+.meta-page .meta-stats dt {
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.meta-page .meta-stats dd {
+  margin: 0.4rem 0 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.meta-page #chart {
+  margin-block: 1.5rem;
+}
+
+.meta-page #chart svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  overflow: visible;
+}
+
+.meta-page .axis {
+  font-size: 12px;
+}
+
+.meta-page .axis-label {
+  fill: currentColor;
+  font-size: 15px;
+}
+
+.meta-page .gridlines line {
+  stroke: currentColor;
+  stroke-opacity: 0.12;
+}
+
+.meta-page .dots circle {
+  fill: #457b9d;
+  fill-opacity: 0.7;
+  stroke: Canvas;
+  stroke-width: 1;
+  cursor: pointer;
+
+  transform-box: fill-box;
+  transform-origin: center;
+
+  transition:
+    transform 150ms ease,
+    fill 150ms ease,
+    fill-opacity 150ms ease;
+}
+
+.meta-page .dots circle:hover,
+.meta-page .dots circle:focus {
+  fill-opacity: 1;
+  stroke: CanvasText;
+  stroke-width: 2;
+  transform: scale(1.12);
+  outline: none;
+}
+
+.meta-page .dots circle.selected {
+  fill: #e76f51;
+  fill-opacity: 1;
+}
+
+.meta-page .brush .selection {
+  fill: #457b9d;
+  fill-opacity: 0.15;
+  stroke: #457b9d;
+  stroke-width: 1.5;
+  stroke-dasharray: 5 3;
+}
+
+.meta-page .selection-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.meta-page #selection-count {
+  font-weight: 600;
+}
+
+.meta-page #clear-selection {
+  padding: 0.55rem 0.9rem;
+  border: 1px solid color-mix(in srgb, CanvasText 30%, transparent);
+  border-radius: 0.5rem;
+  background: Canvas;
+  color: CanvasText;
+  font: inherit;
+  cursor: pointer;
+}
+
+.meta-page #clear-selection:hover {
+  background: color-mix(in srgb, CanvasText 8%, Canvas);
+}
+
+.meta-page #clear-selection:focus-visible {
+  outline: 2px solid #457b9d;
+  outline-offset: 3px;
+}
+
+.meta-page #language-breakdown dd {
+  font-size: 1rem;
+}
+
+.meta-page .commit-tooltip {
+  position: fixed;
+  z-index: 1000;
+
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.4rem 1rem;
+
+  max-width: min(320px, calc(100vw - 24px));
+  margin: 0;
+  padding: 1rem;
+
+  border: 1px solid color-mix(in srgb, CanvasText 20%, transparent);
+  border-radius: 0.75rem;
+
+  background: Canvas;
+  color: CanvasText;
+  box-shadow: 0 6px 24px rgb(0 0 0 / 20%);
+
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+
+.meta-page .commit-tooltip[hidden] {
+  display: none;
+}
+
+.meta-page .commit-tooltip dt {
+  opacity: 0.7;
+}
+
+.meta-page .commit-tooltip dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.meta-page .commit-tooltip a {
+  color: inherit;
+}
+
+.meta-page .data-note,
+.meta-page #language-hint {
+  font-size: 0.9rem;
+  opacity: 0.75;
+}

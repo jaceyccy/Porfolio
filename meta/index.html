@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Meta | Jacey Chow</title>
+
+  <link rel="stylesheet" href="../style.css">
+  <script type="module" src="../global.js"></script>
+  <script type="module" src="./main.js"></script>
+</head>
+
+<body class="meta-page">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="../">
+      Jacey Chow
+      <span>Data Science · UC San Diego</span>
+    </a>
+  </header>
+
+  <main id="main">
+    <header class="page-heading">
+      <h1>Meta</h1>
+      <p class="lead">
+        Exploring the code and commit patterns behind my portfolio.
+      </p>
+    </header>
+
+    <p id="meta-status" role="status">Loading commit data…</p>
+
+    <section aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Code summary</h2>
+      <div id="stats"></div>
+    </section>
+
+    <section aria-labelledby="commits-heading">
+      <h2 id="commits-heading">Commits by time of day</h2>
+
+      <p id="chart-description">
+        Each circle represents a commit. Larger circles represent more
+        current lines attributed to that commit. Hover for details, or
+        drag across empty chart space to select a group.
+        Times use your browser’s local time zone.
+      </p>
+
+      <div id="chart"></div>
+
+      <div class="selection-controls">
+        <p id="selection-count" aria-live="polite">
+          No commits selected
+        </p>
+        <button id="clear-selection" type="button">
+          Clear selection
+        </button>
+      </div>
+
+      <h3>Languages in selected commits</h3>
+      <p id="language-hint">
+        Select commits to see their language breakdown.
+      </p>
+      <dl id="language-breakdown" class="meta-stats"></dl>
+    </section>
+
+    <p class="data-note">
+      This analysis describes lines currently in the repository.
+      It does not include every historical edit or deleted line.
+    </p>
+
+    <dl id="commit-tooltip" class="commit-tooltip" hidden>
+      <dt>Commit</dt>
+      <dd>
+        <a id="commit-link" target="_blank" rel="noopener noreferrer"></a>
+      </dd>
+
+      <dt>Date</dt>
+      <dd id="commit-date"></dd>
+
+      <dt>Time</dt>
+      <dd id="commit-time"></dd>
+
+      <dt>Author</dt>
+      <dd id="commit-author"></dd>
+
+      <dt>Lines</dt>
+      <dd id="commit-lines"></dd>
+    </dl>
+  </main>
+</body>
+</html>
