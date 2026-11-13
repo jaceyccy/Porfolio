@@ -1,5 +1,12 @@
 [
     {
+        "title": "Bikewatching",
+        "year": 2026,
+        "image": "images/bikewatching.jpg",
+        "url": "https://jaceyccy.github.io/bikewatching/",
+        "description": "Interactive Mapbox + D3 map of Bluebikes traffic in Boston and Cambridge (March 2024). Station circles are sized by trip volume and colored by departure/arrival flow, with a time-of-day slider to filter traffic."
+    },
+    {
         "title": "Autonomous Lane-Following Robot",
         "year": 2025,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",

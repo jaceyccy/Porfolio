@@ -855,3 +855,17 @@ select:focus-visible {
   font-size: 0.9rem;
   opacity: 0.75;
 }
+/* Lab 7: links to live projects */
+.projects h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.projects h2 a:hover {
+  color: var(--accent);
+}
+
+.project-link a {
+  color: var(--accent);
+  font-weight: 600;
+}

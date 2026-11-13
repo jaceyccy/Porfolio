@@ -116,14 +116,22 @@ export function renderProjects(projects, container, headingLevel = "h2") {
   for (const project of projects) {
     const article = document.createElement("article");
     const title = project.title ?? "Untitled project";
-    const image = project.image ?? "";
+    // Resolve relative image paths against the site root so they work on every page.
+    const image = project.image ? new URL(project.image, siteRoot).href : "";
     const description = project.description ?? "";
+    const heading = project.url
+      ? `<a href="${project.url}" target="_blank" rel="noopener noreferrer">${title}</a>`
+      : title;
+    const link = project.url
+      ? `<p class="project-link"><a href="${project.url}" target="_blank" rel="noopener noreferrer">View project ↗</a></p>`
+      : "";
 
     article.innerHTML = `
-    <${validHeading}>${title}</${validHeading}>
+    <${validHeading}>${heading}</${validHeading}>
     <img src="${image}" alt="${title}">
     <div class="project-details">
       <p>${description}</p>
+      ${link}
       <p class="project-year">${project.year ?? "Year unavailable"}</p>
     </div>
   `;
