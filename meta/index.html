@@ -40,21 +40,41 @@
       <h2 id="commits-heading">Commits by time of day</h2>
 
       <p id="chart-description">
-        Each circle represents a commit. Larger circles represent more
-        current lines attributed to that commit. Hover for details, or
-        drag across empty chart space to select a group.
+        Scroll through the story to watch the portfolio grow commit by
+        commit. Each circle represents a commit, and larger circles
+        represent more current lines attributed to that commit. Hover
+        for details, or drag across empty chart space to select a group.
         Times use your browser’s local time zone.
       </p>
 
-      <div id="chart"></div>
+      <!-- Lab 8 Step 3: story on the left, sticky chart on the right. -->
+      <div id="scrolly-1">
+        <div id="scatter-story"></div>
 
-      <div class="selection-controls">
-        <p id="selection-count" aria-live="polite">
-          No commits selected
-        </p>
-        <button id="clear-selection" type="button">
-          Clear selection
-        </button>
+        <div id="scatter-plot">
+          <div class="commit-filter">
+            <label for="commit-progress">Show commits until:</label>
+            <input
+              type="range"
+              id="commit-progress"
+              min="0"
+              max="100"
+              value="100"
+            >
+            <time id="commit-time" aria-live="polite"></time>
+          </div>
+
+          <div id="chart"></div>
+
+          <div class="selection-controls">
+            <p id="selection-count" aria-live="polite">
+              No commits selected
+            </p>
+            <button id="clear-selection" type="button">
+              Clear selection
+            </button>
+          </div>
+        </div>
       </div>
 
       <h3>Languages in selected commits</h3>
@@ -69,6 +89,15 @@
       It does not include every historical edit or deleted line.
     </p>
 
+    <section aria-labelledby="files-heading">
+      <h2 id="files-heading">Lines per file</h2>
+      <p class="data-note">
+        Each dot is one line of code, colored by technology.
+        Files are sorted from largest to smallest.
+      </p>
+      <dl id="files"></dl>
+    </section>
+
     <dl id="commit-tooltip" class="commit-tooltip" hidden>
       <dt>Commit</dt>
       <dd>
@@ -79,7 +108,7 @@
       <dd id="commit-date"></dd>
 
       <dt>Time</dt>
-      <dd id="commit-time"></dd>
+      <dd id="commit-tooltip-time"></dd>
 
       <dt>Author</dt>
       <dd id="commit-author"></dd>

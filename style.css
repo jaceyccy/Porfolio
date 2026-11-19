@@ -686,6 +686,144 @@ select:focus-visible {
   display: none;
 }
 
+/* Lab 8: time slider */
+.meta-page .commit-filter {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-block: 1.5rem;
+}
+
+.meta-page .commit-filter label {
+  font-weight: 600;
+}
+
+.meta-page .commit-filter input {
+  flex: 1;
+  min-width: 12rem;
+}
+
+.meta-page .commit-filter time {
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Lab 8: scrollytelling layout */
+.meta-page #scrolly-1 {
+  position: relative;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.meta-page #scrolly-1 > * {
+  flex: 1;
+}
+
+/* The chart gets more room than the story text. */
+.meta-page #scrolly-1 > #scatter-plot {
+  flex: 1.6;
+}
+
+.meta-page #scatter-story {
+  position: relative;
+}
+
+.meta-page #scatter-plot {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  /* Sticky needs a fixed height, or flex stretches it to the story's height. */
+  height: 50vh;
+  min-height: 24rem;
+  align-self: flex-start;
+}
+
+.meta-page #scatter-plot .commit-filter {
+  margin-block: 0.5rem;
+}
+
+.meta-page #scatter-plot #chart {
+  margin-block: 0.5rem;
+}
+
+.meta-page .step {
+  padding-bottom: 60vh;
+  line-height: 1.5;
+}
+
+.meta-page .step:first-child {
+  padding-top: 1rem;
+}
+
+.meta-page .step:last-child {
+  padding-bottom: 20vh;
+}
+
+/* Narrow screens: chart pinned on top, story scrolls underneath. */
+@media (max-width: 720px) {
+  .meta-page #scrolly-1 {
+    flex-direction: column-reverse;
+  }
+
+  .meta-page #scatter-plot {
+    z-index: 1;
+    height: auto;
+    min-height: 0;
+    align-self: stretch;
+    background: var(--paper);
+  }
+
+  .meta-page .step {
+    padding-bottom: 40vh;
+  }
+}
+
+/* Lab 8: file unit visualization */
+.meta-page #files {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  row-gap: 0.75rem;
+  margin-block: 1rem;
+}
+
+.meta-page #files > div {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
+.meta-page #files dt {
+  grid-column: 1;
+  overflow-wrap: anywhere;
+}
+
+.meta-page #files dt small {
+  display: block;
+  font-size: 0.75em;
+  opacity: 0.65;
+}
+
+.meta-page #files dd {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  align-content: start;
+  gap: 0.15em;
+  padding-top: 0.6em;
+  margin-left: 0;
+}
+
+.meta-page .loc {
+  display: flex;
+  width: 0.5em;
+  aspect-ratio: 1;
+  background: var(--color, steelblue);
+  border-radius: 50%;
+}
+
 .meta-page .meta-stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -747,10 +885,20 @@ select:focus-visible {
   transform-box: fill-box;
   transform-origin: center;
 
+  /* Lab 8: animate position and size as the slider filters commits.
+     Bigger circles take longer to grow so growth speed stays even. */
   transition:
     transform 150ms ease,
     fill 150ms ease,
-    fill-opacity 150ms ease;
+    fill-opacity 150ms ease,
+    cx 200ms ease,
+    cy 200ms ease,
+    r calc(var(--r, 10) * 20ms) ease;
+
+  /* New circles grow in from nothing. */
+  @starting-style {
+    r: 0;
+  }
 }
 
 .meta-page .dots circle:hover,
